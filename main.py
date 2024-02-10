@@ -1,10 +1,10 @@
-import time, schedule
+import time, schedule ,random
 import Coinmarket_scrape as cs
 import coinmarket_write as cw
 
 def main():
     cs.main()
-    time.sleep(2)
+    time.sleep(1)
     cw.main()
 
 if __name__ == "__main__":
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     #     schedule.run_pending()  
     while True:
         main()
-        time.sleep(60)
+        time.sleep(random.randint(250,300))

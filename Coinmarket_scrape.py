@@ -5,7 +5,6 @@ def fetch_data(url, params):
 
     session = requests.session()
     response = session.get(url, params=params).json()
-    # print(response.text)
     return response
 
 def json_parse(response_object):
@@ -42,8 +41,8 @@ def json_parse(response_object):
 
 def write_data(some_list_of_dicts):
     fields_list = list(some_list_of_dicts[0].keys())
-    wd = os.getcwd()
-    os.chdir(os.getcwd()+'/Stores')
+    # wd = os.getcwd()
+    # os.chdir(os.getcwd()+'/Stores')
 
     with open('index.csv','w',encoding='utf-8', newline='') as index:
         index.write(f'Last updated time : {datetime.datetime.now().strftime("%B %d, %Y | %I:%M:%S %p")}')
@@ -53,7 +52,7 @@ def write_data(some_list_of_dicts):
         for data in some_list_of_dicts:
             index.writerow(data)
     
-    os.chdir(wd)
+    # os.chdir(wd)
 
 def main():
     url = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/listing"
