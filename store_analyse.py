@@ -1,1 +1,7 @@
-import os, time
+import os, time, csv
+
+def  main():
+    print(os.getcwd())
+
+if __name__ == "__main__":
+    main()
