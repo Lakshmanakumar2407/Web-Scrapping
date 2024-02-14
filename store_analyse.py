@@ -1,29 +1,6 @@
 import os
 import datetime as dt
-# from memory_profiler import profile
 
-
-def price_track(some_list, percent, time_period):
-    list_len = len(some_list)
-    price_delta = [(float(some_list[i])-float(some_list[i-1]))/float(some_list[i-1])*100 for i in range(1,list_len)]
-    delta_dict = {}
-    for index, delta in enumerate(price_delta, start=1):
-        if delta>percent:
-            delta_dict[index] = delta
-            # print(delta, index, some_list.index(some_list[index]), some_list[index])
-    return delta_dict
-
-def time_filter(some_dict, time_interval_in_minutes):
-    time_val = [time for time in some_dict]
-
-    filtered_time = list()
-    filtered_time.append(time_val[0])
-
-    for i in range(1, len(time_val)):
-        time_diff = time_val[i] - time_val[i-1]
-        print(time_diff.seconds)
-
-# @profile
 def start_here():
     store_path = os.path.join(os.getcwd(),'Stores')
     os.chdir(store_path)
@@ -40,29 +17,78 @@ def start_here():
         for line in crypto_file:
 
             row_values = (line.strip()).split(',')
-            cmcRank, circulatingSupply, price, volume24, datetime_str = row_values
+            _cmcRank, _circulatingSupply, _price, _volume24, _datetime_str = row_values
 
             dict_with_datetime_as_key.update(
-                {dt.datetime.strptime(datetime_str,"%Y %m %d - %I:%M:%S %p"):[cmcRank,circulatingSupply,price,volume24]})
+                {dt.datetime.strptime(_datetime_str,"%Y %m %d - %I:%M:%S %p"):[_cmcRank,_circulatingSupply,_price,_volume24]})
+            
+            # print(dict_with_datetime_as_key)
+                  
+        user_required_datetime = time_filter(dict_with_datetime_as_key,10)
+        # print(user_required_datetime)
 
-            cmcRank_list.append(cmcRank)
-            circulatingSupply_list.append(circulatingSupply)
-            price_list.append(price)
-            volume24_list.append(volume24)
-            datetime_list.append(dt.datetime.strptime(datetime_str,"%Y %m %d - %I:%M:%S %p"))
+        user_required_delta_lol = val_track(dict_with_datetime_as_key, user_required_datetime, 'price', 'volume24')
+        # print(len(user_required_delta_lol),user_required_delta_lol)
 
-        # print(dict_with_datetime_as_key)
-    # return_dict = price_track(price_list,0.1,3600)
-    # for key, value in return_dict.items():
-    #     # print(f'''The stock rose by {value}% at time {datetime_list[key]}
-              
-    #     #         Other Stock details at that time 
-    #     #         Stock price = {price_list[key]}
-    #     #         circulating Supple = {circulatingSupply_list[key]}\n\n''')
-    #     pass
-        
-        time_filter(dict_with_datetime_as_key,20)
+        # trigger_email(user_required_delta_lol, 0.2, 1)
     
+
+def time_filter(some_dict, time_interval_in_minutes):
+    
+    time_val = [time for time in some_dict]
+    time_interval_in_seconds = time_interval_in_minutes*60
+    time_diff = 0
+
+    filtered_time = list()
+    filtered_time.append(time_val[0])
+
+    for i in range(1, len(time_val)):
+        time_diff += (time_val[i] - time_val[i-1]).seconds
+        if time_diff >= time_interval_in_seconds:
+            filtered_time.append(time_val[i])
+            # print(time_diff, time_interval_in_seconds)
+            time_diff = 0
+    
+    return filtered_time
+
+def val_track(some_dict, required_datetime, *args):
+
+    default_mapper = {
+        'cmcRank':0, 
+        'circulatingSupply':1,
+        'price':2,
+        'volume24':3
+            }
+
+    user_mapper = {tag:value for tag,value in default_mapper.items() if tag in args}
+    # print(user_mapper)
+
+    user_required_data = {times:vals for times,vals in some_dict.items() if times in required_datetime}
+    print(user_required_data)
+
+    percent_diff_lod = list()
+
+    # len_user_req_data, len_of_val = len(user_required_data),len(user_required_data[0])
+
+    # for i in range(1,len_user_req_data):
+    #     temp_list = []
+    #     for k in range(len_of_val):
+    #         if k in user_mapper.values():
+    #             new_data = round(float(user_required_data[i][k]),5)
+    #             old_data = round(float(user_required_data[i-1][k]),5)
+    #             temp_list.append(((new_data-old_data)/old_data)*100)
+    #             # print(old_data,new_data,temp_list)
+    #     percent_diff_lod.append(temp_list)
+    
+    # return percent_diff_lod
+
+def trigger_email(some_list_of_lists, *args):
+
+    for instance in some_list_of_lists:
+        for val in instance:
+            if val >= args[instance.index(val)]:
+                print(val, instance.index(val))
+
 
 if __name__ == "__main__":
     start_here()

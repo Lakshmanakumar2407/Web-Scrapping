@@ -13,4 +13,4 @@ if __name__ == "__main__":
     #     schedule.run_pending()  
     while True:
         main()
-        time.sleep(random.randint(250,300))
+        time.sleep(120)
