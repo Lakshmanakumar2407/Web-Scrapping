@@ -1,3 +1,8 @@
+'''
+Lesson Learnt: First know what you need and what the output should be before even touching keyboard.
+Now I need to redo this
+'''
+
 import os
 import datetime as dt
 
@@ -24,13 +29,13 @@ def start_here():
             
             # print(dict_with_datetime_as_key)
                   
-        user_required_datetime = time_filter(dict_with_datetime_as_key,10)
+        user_required_datetime = time_filter(dict_with_datetime_as_key,20)
         # print(user_required_datetime)
 
-        user_required_delta_lol = val_track(dict_with_datetime_as_key, user_required_datetime, 'price', 'volume24')
+        user_required_delta_lod = val_track(dict_with_datetime_as_key, user_required_datetime, 'price', 'volume24')
         # print(len(user_required_delta_lol),user_required_delta_lol)
 
-        # trigger_email(user_required_delta_lol, 0.2, 1)
+        trigger_email(user_required_delta_lod, [0.2, 1])
     
 
 def time_filter(some_dict, time_interval_in_minutes):
@@ -63,31 +68,36 @@ def val_track(some_dict, required_datetime, *args):
     user_mapper = {tag:value for tag,value in default_mapper.items() if tag in args}
     # print(user_mapper)
 
-    user_required_data = {times:vals for times,vals in some_dict.items() if times in required_datetime}
-    print(user_required_data)
+    user_required_data_values = [vals for times,vals in some_dict.items() if times in required_datetime]
+    user_required_data_keys = [times for times,vals in some_dict.items() if times in required_datetime]
 
     percent_diff_lod = list()
 
-    # len_user_req_data, len_of_val = len(user_required_data),len(user_required_data[0])
+    len_user_req_data, len_of_val = len(user_required_data_values),len(user_required_data_values[0])
 
-    # for i in range(1,len_user_req_data):
-    #     temp_list = []
-    #     for k in range(len_of_val):
-    #         if k in user_mapper.values():
-    #             new_data = round(float(user_required_data[i][k]),5)
-    #             old_data = round(float(user_required_data[i-1][k]),5)
-    #             temp_list.append(((new_data-old_data)/old_data)*100)
-    #             # print(old_data,new_data,temp_list)
-    #     percent_diff_lod.append(temp_list)
+    for i in range(1,len_user_req_data):
+        temp_list, temp_dict = list(), dict()
+        for k in range(len_of_val):
+            if k in user_mapper.values():
+                new_data = round(float(user_required_data_values[i][k]),5)
+                old_data = round(float(user_required_data_values[i-1][k]),5)
+                temp_list.append(((new_data-old_data)/old_data)*100)
+                # print(old_data,new_data,temp_dict)
+            temp_dict[user_required_data_keys[i]] = temp_list
+        percent_diff_lod.append(temp_dict)
+        # print(percent_diff_lod)
     
-    # return percent_diff_lod
+    return percent_diff_lod
 
-def trigger_email(some_list_of_lists, *args):
+def trigger_email(some_list_of_dict, *args):
 
-    for instance in some_list_of_lists:
-        for val in instance:
-            if val >= args[instance.index(val)]:
-                print(val, instance.index(val))
+    params = [val for arg in args for val in arg]
+
+    for every_dict in some_list_of_dict:
+        for date_time, values in every_dict.items():
+            for index, i_values in enumerate(values):
+                if i_values>params[index]:
+                    print(i_values, index, date_time)
 
 
 if __name__ == "__main__":
