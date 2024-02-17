@@ -19,7 +19,6 @@ import datetime as dt
 
 # List of Crypto's to track
 user_crypto_list = ['Bitcoin', 'Aave', 'Beam', 'Cardano']
-# user_crypto_list = ['Bitcoin']
 
 # Parameters as key : percent and time interval as key
 user_tracking_dict = {'price':[0.1, 10], 'volume24':[1.0, 10]}
@@ -54,7 +53,8 @@ def start_here(list_of_crypto_to_track, dict_with_params):
     -> The function should return dict of dict for only the value which pass the user percent
     '''
 
-    store_path = os.path.join(os.getcwd(),'Stores')
+    wd = os.getcwd()
+    store_path = os.path.join(wd,'Stores')
     os.chdir(store_path)
 
     # filter only the user required params from deault mapper
@@ -75,20 +75,26 @@ def start_here(list_of_crypto_to_track, dict_with_params):
     dict_with_latest_values = latest_value_filter(master_dict)
     # print(dict_with_latest_values)
 
+    email_message = ''
+
     for crypto in dict_with_latest_values:
         if len(dict_with_latest_values[crypto]) != 0:
-            string_construct(crypto, dict_with_latest_values[crypto])
+            email_message += string_construct(crypto, dict_with_latest_values[crypto])
+    print(email_message)
+
+    os.chdir(wd)
        
 def filter_data_user(file_name, dict_with_user_params_and_vals ):
     '''Dicts values lists first value is percent_inrease, time_interval_minutes, index_of_the_param 
     
     I need to return a dict of dict with dict key being the parameter and value being the time series data
     '''
-
     params_timeseries_dict_of_dicts = dict()
 
+    # print(file_name)
+
     # for loop will be used here for simplicity, I directly passed the value
-    with open(f'{file_name}.csv') as crypto_file:
+    with open(f'{file_name}') as crypto_file:
 
         # Ignoring the first line because it's headers
         next(crypto_file)
@@ -132,12 +138,12 @@ def user_percent_filter(some_dod, dict_with_usr_params_and_vals):
         prev_val = None
 
         for time, value in some_dod[params].items():
-            c_value = round(float(value),5)
+            c_value = round(float(value),20)
             
             if prev_val is None:
                 prev_val = c_value
                 continue
-            
+
             percent_diff = (c_value - prev_val)/prev_val*100
             # print(params, percent_diff, prev_val, c_value, time)
             
@@ -152,7 +158,9 @@ def user_percent_filter(some_dod, dict_with_usr_params_and_vals):
 
 def latest_value_filter(dict_with_historical_values):
     lates_value_dict = dict()
-    dt_now = dt.datetime(2024, 2, 14, 17, 54, 10)
+    # dt_now = dt.datetime(2024, 2, 14, 17, 44, 10)
+    dt_now = dt.datetime.now()
+    # print(dt_now)
 
     for crypto in dict_with_historical_values:
         lates_value_dict[crypto] = {}
@@ -175,16 +183,25 @@ def string_construct(crypto_name, changed_value_dict):
 
     for param in changed_value_dict:
         datetime = list(changed_value_dict[param])[0]
-        # print(datetime)
-        string_to_return += f"""
-        {crypto_name}'s {param} changed by {changed_value_dict[param][datetime][2]} from {changed_value_dict[param][datetime][1]} to {changed_value_dict[param][datetime][0]} at {datetime} """
+        percent = round(changed_value_dict[param][datetime][2],3)
+        old_value = round(changed_value_dict[param][datetime][1],5)
+        new_value = round(changed_value_dict[param][datetime][0],5)
 
-    print(string_to_return)
+        string_to_return += f"""
+        {crypto_name}'s {param} changed by {percent}% from ${old_value} to ${new_value} at {datetime} \n """
+
+    # print(string_to_return)
     return string_to_return
 
 
 if __name__ == "__main__":
-    start_here(user_crypto_list, user_tracking_dict)
+    wd = os.getcwd()
+    os.chdir(wd+'\\Stores')
+    user_crypto_list1 = os.listdir()
+    # print(user_crypto_list1)
+    os.chdir(wd)
+
+    start_here(user_crypto_list1, user_tracking_dict)
 
 # def time_filter(some_dict, time_interval_in_minutes):
     

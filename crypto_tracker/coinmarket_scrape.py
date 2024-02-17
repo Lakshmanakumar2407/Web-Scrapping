@@ -1,11 +1,22 @@
-import os, requests, json, csv, datetime
+import os, requests, json, csv, datetime, time
 
 
 def fetch_data(url, params):
 
     session = requests.session()
-    response = session.get(url, params=params).json()
+    # max_retries = 5
+    # for _ in range(max_retries):
+    #     try:
+    #         response = session.get(url, params=params, timeout=10).json()
+    #         return response
+    #     except TimeoutError:
+    #         time.sleep(30)
+    #         continue
+    #     except ConnectionError:
+    #         raise ConnectionError
+    response = session.get(url, params=params, timeout=10).json()
     return response
+
 
 def json_parse(response_object):
     with open('json_dump.json','w') as file:
