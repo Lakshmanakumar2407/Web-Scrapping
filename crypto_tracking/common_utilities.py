@@ -1,7 +1,8 @@
 import datetime as dt
 import os
+import smtplib
 
-print(os.getcwd())
+# print(os.getcwd())
 
 def error_logger(error, msg):
     """
@@ -19,6 +20,3 @@ def error_logger(error, msg):
             log.write(f'{error.__name__} occurred at {time_at_calling} - {msg}')
 
     print("Error logged - check for detailed info at er_logger.txt")
-
-    # print(f'{error.__name__} occurred at {time_now} - {msg}')
-    # # print(error)
