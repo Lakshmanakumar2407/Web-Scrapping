@@ -15,6 +15,7 @@ OUTPUT
 
 import os
 import datetime as dt
+import common_utilities as cu
 
 # List of Crypto's to track
 user_crypto_list = ['Bitcoin', 'Aave', 'Beam', 'Cardano']
@@ -51,6 +52,8 @@ def analyse_filter(list_of_crypto_to_track, dict_with_params):
     -> Pass the time_interval filtered data to percent check function
     -> The function should return dict of dict for only the value which pass the user percent
     '''
+    cu.activity_logger('Checking data for user changes')
+
     # print("Entered Store analyse")
     wd = os.getcwd()
     # print(wd)
@@ -81,10 +84,15 @@ def analyse_filter(list_of_crypto_to_track, dict_with_params):
     for crypto in dict_with_latest_values:
         if len(dict_with_latest_values[crypto]) != 0:
             email_message += string_construct(crypto, dict_with_latest_values[crypto])
-    print(email_message)
 
+    # print(email_message, len(email_message))
+    
     os.chdir(wd)
     # print(os.getcwd())
+
+    # defining this here because of directory stufff
+    if len(email_message)!= 0: 
+        cu.send_email(email_message)
        
 def filter_data_user(file_name, dict_with_user_params_and_vals ):
     '''Dicts values lists first value is percent_inrease, time_interval_minutes, index_of_the_param 

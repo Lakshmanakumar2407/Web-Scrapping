@@ -1,9 +1,12 @@
 import os, csv
 import datetime as dt
+import common_utilities as cu
 
 max_val_store_day = 3600
 
 def store_cleaner(max_time_val):
+    cu.activity_logger("Cleaning old data....")
+
     # print('Entered Store cleaner')
     wd = os.getcwd()
     # print(wd)

@@ -1,0 +1,686 @@
+Fetching data - performed on 19/02/2024, 10:59:38
+Recording Data - performed on 19/02/2024, 10:59:39
+Checking data for user changes - performed on 19/02/2024, 10:59:39
+Cleaning old data.... - performed on 19/02/2024, 10:59:40
+------------------ - performed on 19/02/2024, 10:59:40
+Fetching data - performed on 19/02/2024, 11:04:40
+Recording Data - performed on 19/02/2024, 11:04:41
+Checking data for user changes - performed on 19/02/2024, 11:04:41
+Cleaning old data.... - performed on 19/02/2024, 11:04:42
+------------------ - performed on 19/02/2024, 11:04:42
+Fetching data - performed on 19/02/2024, 11:09:42
+Recording Data - performed on 19/02/2024, 11:09:44
+Checking data for user changes - performed on 19/02/2024, 11:09:44
+Cleaning old data.... - performed on 19/02/2024, 11:09:47
+------------------ - performed on 19/02/2024, 11:09:47
+Fetching data - performed on 19/02/2024, 11:14:47
+Recording Data - performed on 19/02/2024, 11:14:48
+Checking data for user changes - performed on 19/02/2024, 11:14:48
+Cleaning old data.... - performed on 19/02/2024, 11:14:49
+------------------ - performed on 19/02/2024, 11:14:49
+Fetching data - performed on 19/02/2024, 11:19:49
+Recording Data - performed on 19/02/2024, 11:19:51
+Checking data for user changes - performed on 19/02/2024, 11:19:51
+Cleaning old data.... - performed on 19/02/2024, 11:19:54
+------------------ - performed on 19/02/2024, 11:19:54
+Fetching data - performed on 19/02/2024, 11:24:54
+Recording Data - performed on 19/02/2024, 11:24:55
+Checking data for user changes - performed on 19/02/2024, 11:24:55
+Cleaning old data.... - performed on 19/02/2024, 11:24:56
+------------------ - performed on 19/02/2024, 11:24:56
+Fetching data - performed on 19/02/2024, 11:29:56
+Recording Data - performed on 19/02/2024, 11:29:57
+Checking data for user changes - performed on 19/02/2024, 11:29:57
+Cleaning old data.... - performed on 19/02/2024, 11:30:00
+------------------ - performed on 19/02/2024, 11:30:00
+Fetching data - performed on 19/02/2024, 11:35:00
+Recording Data - performed on 19/02/2024, 11:35:01
+Checking data for user changes - performed on 19/02/2024, 11:35:01
+Cleaning old data.... - performed on 19/02/2024, 11:35:02
+------------------ - performed on 19/02/2024, 11:35:02
+Fetching data - performed on 19/02/2024, 11:40:02
+Recording Data - performed on 19/02/2024, 11:40:03
+Checking data for user changes - performed on 19/02/2024, 11:40:03
+Cleaning old data.... - performed on 19/02/2024, 11:40:07
+------------------ - performed on 19/02/2024, 11:40:07
+Fetching data - performed on 19/02/2024, 11:45:07
+Recording Data - performed on 19/02/2024, 11:45:08
+Checking data for user changes - performed on 19/02/2024, 11:45:08
+Cleaning old data.... - performed on 19/02/2024, 11:45:08
+------------------ - performed on 19/02/2024, 11:45:08
+Fetching data - performed on 19/02/2024, 11:50:08
+Recording Data - performed on 19/02/2024, 11:50:09
+Checking data for user changes - performed on 19/02/2024, 11:50:09
+Cleaning old data.... - performed on 19/02/2024, 11:50:13
+------------------ - performed on 19/02/2024, 11:50:13
+Fetching data - performed on 19/02/2024, 11:55:13
+Recording Data - performed on 19/02/2024, 11:55:15
+Checking data for user changes - performed on 19/02/2024, 11:55:15
+Cleaning old data.... - performed on 19/02/2024, 11:55:15
+------------------ - performed on 19/02/2024, 11:55:16
+Fetching data - performed on 19/02/2024, 12:00:16
+Recording Data - performed on 19/02/2024, 12:00:16
+Checking data for user changes - performed on 19/02/2024, 12:00:16
+Cleaning old data.... - performed on 19/02/2024, 12:00:20
+------------------ - performed on 19/02/2024, 12:00:20
+Fetching data - performed on 19/02/2024, 12:05:20
+Recording Data - performed on 19/02/2024, 12:05:21
+Checking data for user changes - performed on 19/02/2024, 12:05:22
+Cleaning old data.... - performed on 19/02/2024, 12:05:22
+------------------ - performed on 19/02/2024, 12:05:22
+Fetching data - performed on 19/02/2024, 12:10:22
+Recording Data - performed on 19/02/2024, 12:10:24
+Checking data for user changes - performed on 19/02/2024, 12:10:24
+Cleaning old data.... - performed on 19/02/2024, 12:10:28
+------------------ - performed on 19/02/2024, 12:10:28
+Fetching data - performed on 19/02/2024, 12:15:28
+Recording Data - performed on 19/02/2024, 12:15:29
+Checking data for user changes - performed on 19/02/2024, 12:15:29
+Cleaning old data.... - performed on 19/02/2024, 12:15:30
+------------------ - performed on 19/02/2024, 12:15:30
+Fetching data - performed on 19/02/2024, 12:20:30
+Recording Data - performed on 19/02/2024, 12:20:31
+Checking data for user changes - performed on 19/02/2024, 12:20:31
+Cleaning old data.... - performed on 19/02/2024, 12:20:34
+------------------ - performed on 19/02/2024, 12:20:34
+Fetching data - performed on 19/02/2024, 12:25:34
+Recording Data - performed on 19/02/2024, 12:25:36
+Checking data for user changes - performed on 19/02/2024, 12:25:36
+Cleaning old data.... - performed on 19/02/2024, 12:25:37
+------------------ - performed on 19/02/2024, 12:25:37
+Fetching data - performed on 19/02/2024, 12:30:37
+Recording Data - performed on 19/02/2024, 12:30:39
+Checking data for user changes - performed on 19/02/2024, 12:30:39
+Cleaning old data.... - performed on 19/02/2024, 12:30:43
+------------------ - performed on 19/02/2024, 12:30:43
+Fetching data - performed on 19/02/2024, 12:32:32
+Recording Data - performed on 19/02/2024, 12:32:36
+Checking data for user changes - performed on 19/02/2024, 12:32:36
+Cleaning old data.... - performed on 19/02/2024, 12:32:37
+------------------ - performed on 19/02/2024, 12:32:37
+Fetching data - performed on 19/02/2024, 12:37:37
+Recording Data - performed on 19/02/2024, 12:37:38
+Checking data for user changes - performed on 19/02/2024, 12:37:38
+Cleaning old data.... - performed on 19/02/2024, 12:37:39
+------------------ - performed on 19/02/2024, 12:37:39
+Fetching data - performed on 19/02/2024, 12:42:39
+Recording Data - performed on 19/02/2024, 12:42:40
+Checking data for user changes - performed on 19/02/2024, 12:42:40
+Cleaning old data.... - performed on 19/02/2024, 12:42:44
+------------------ - performed on 19/02/2024, 12:42:44
+Fetching data - performed on 19/02/2024, 12:47:44
+Recording Data - performed on 19/02/2024, 12:47:45
+Checking data for user changes - performed on 19/02/2024, 12:47:45
+Cleaning old data.... - performed on 19/02/2024, 12:47:45
+------------------ - performed on 19/02/2024, 12:47:45
+Fetching data - performed on 19/02/2024, 12:52:45
+Recording Data - performed on 19/02/2024, 12:52:46
+Checking data for user changes - performed on 19/02/2024, 12:52:46
+Cleaning old data.... - performed on 19/02/2024, 12:52:47
+------------------ - performed on 19/02/2024, 12:52:47
+Fetching data - performed on 19/02/2024, 12:57:47
+Recording Data - performed on 19/02/2024, 12:57:48
+Checking data for user changes - performed on 19/02/2024, 12:57:49
+Cleaning old data.... - performed on 19/02/2024, 12:57:49
+------------------ - performed on 19/02/2024, 12:57:50
+Fetching data - performed on 19/02/2024, 13:02:50
+Recording Data - performed on 19/02/2024, 13:02:51
+Checking data for user changes - performed on 19/02/2024, 13:02:51
+Cleaning old data.... - performed on 19/02/2024, 13:02:51
+------------------ - performed on 19/02/2024, 13:02:51
+Fetching data - performed on 19/02/2024, 13:07:51
+Recording Data - performed on 19/02/2024, 13:07:52
+Checking data for user changes - performed on 19/02/2024, 13:07:52
+Cleaning old data.... - performed on 19/02/2024, 13:07:53
+------------------ - performed on 19/02/2024, 13:07:53
+Fetching data - performed on 19/02/2024, 13:12:53
+Recording Data - performed on 19/02/2024, 13:12:54
+Checking data for user changes - performed on 19/02/2024, 13:12:54
+Cleaning old data.... - performed on 19/02/2024, 13:12:55
+------------------ - performed on 19/02/2024, 13:12:55
+Fetching data - performed on 19/02/2024, 13:17:55
+Recording Data - performed on 19/02/2024, 13:17:56
+Checking data for user changes - performed on 19/02/2024, 13:17:56
+Cleaning old data.... - performed on 19/02/2024, 13:17:57
+------------------ - performed on 19/02/2024, 13:17:58
+Fetching data - performed on 19/02/2024, 13:22:58
+Recording Data - performed on 19/02/2024, 13:22:59
+Checking data for user changes - performed on 19/02/2024, 13:22:59
+Cleaning old data.... - performed on 19/02/2024, 13:23:00
+------------------ - performed on 19/02/2024, 13:23:00
+Fetching data - performed on 19/02/2024, 13:28:00
+Recording Data - performed on 19/02/2024, 13:28:01
+Checking data for user changes - performed on 19/02/2024, 13:28:01
+Cleaning old data.... - performed on 19/02/2024, 13:28:02
+------------------ - performed on 19/02/2024, 13:28:02
+Fetching data - performed on 19/02/2024, 13:33:02
+Recording Data - performed on 19/02/2024, 13:33:03
+Checking data for user changes - performed on 19/02/2024, 13:33:03
+Cleaning old data.... - performed on 19/02/2024, 13:33:07
+------------------ - performed on 19/02/2024, 13:33:07
+Fetching data - performed on 19/02/2024, 13:38:07
+Recording Data - performed on 19/02/2024, 13:38:08
+Checking data for user changes - performed on 19/02/2024, 13:38:08
+Cleaning old data.... - performed on 19/02/2024, 13:38:09
+------------------ - performed on 19/02/2024, 13:38:09
+Fetching data - performed on 19/02/2024, 13:43:09
+Recording Data - performed on 19/02/2024, 13:43:10
+Checking data for user changes - performed on 19/02/2024, 13:43:10
+Cleaning old data.... - performed on 19/02/2024, 13:43:14
+------------------ - performed on 19/02/2024, 13:43:14
+Fetching data - performed on 19/02/2024, 13:48:14
+Recording Data - performed on 19/02/2024, 13:48:15
+Checking data for user changes - performed on 19/02/2024, 13:48:15
+Cleaning old data.... - performed on 19/02/2024, 13:48:16
+------------------ - performed on 19/02/2024, 13:48:16
+Fetching data - performed on 19/02/2024, 13:53:16
+Recording Data - performed on 19/02/2024, 13:53:17
+Checking data for user changes - performed on 19/02/2024, 13:53:17
+Cleaning old data.... - performed on 19/02/2024, 13:53:18
+------------------ - performed on 19/02/2024, 13:53:19
+Fetching data - performed on 19/02/2024, 13:58:19
+Recording Data - performed on 19/02/2024, 13:58:20
+Checking data for user changes - performed on 19/02/2024, 13:58:20
+Cleaning old data.... - performed on 19/02/2024, 13:58:21
+------------------ - performed on 19/02/2024, 13:58:21
+Fetching data - performed on 19/02/2024, 14:03:21
+Recording Data - performed on 19/02/2024, 14:03:23
+Checking data for user changes - performed on 19/02/2024, 14:03:23
+Cleaning old data.... - performed on 19/02/2024, 14:03:26
+------------------ - performed on 19/02/2024, 14:03:26
+Fetching data - performed on 19/02/2024, 14:08:26
+Recording Data - performed on 19/02/2024, 14:08:27
+Checking data for user changes - performed on 19/02/2024, 14:08:27
+Cleaning old data.... - performed on 19/02/2024, 14:08:27
+------------------ - performed on 19/02/2024, 14:08:28
+Fetching data - performed on 19/02/2024, 14:13:28
+Recording Data - performed on 19/02/2024, 14:13:28
+Checking data for user changes - performed on 19/02/2024, 14:13:29
+Cleaning old data.... - performed on 19/02/2024, 14:13:29
+------------------ - performed on 19/02/2024, 14:13:29
+Fetching data - performed on 19/02/2024, 14:18:29
+Recording Data - performed on 19/02/2024, 14:18:30
+Checking data for user changes - performed on 19/02/2024, 14:18:30
+Cleaning old data.... - performed on 19/02/2024, 14:18:31
+------------------ - performed on 19/02/2024, 14:18:31
+Fetching data - performed on 19/02/2024, 14:23:31
+Recording Data - performed on 19/02/2024, 14:23:36
+Checking data for user changes - performed on 19/02/2024, 14:23:36
+Cleaning old data.... - performed on 19/02/2024, 14:23:40
+------------------ - performed on 19/02/2024, 14:23:40
+Fetching data - performed on 19/02/2024, 14:28:40
+Recording Data - performed on 19/02/2024, 14:28:41
+Checking data for user changes - performed on 19/02/2024, 14:28:41
+Cleaning old data.... - performed on 19/02/2024, 14:28:42
+------------------ - performed on 19/02/2024, 14:28:42
+Fetching data - performed on 19/02/2024, 14:33:42
+Recording Data - performed on 19/02/2024, 14:33:44
+Checking data for user changes - performed on 19/02/2024, 14:33:44
+Cleaning old data.... - performed on 19/02/2024, 14:33:45
+------------------ - performed on 19/02/2024, 14:33:45
+Fetching data - performed on 19/02/2024, 14:38:45
+Recording Data - performed on 19/02/2024, 14:38:46
+Checking data for user changes - performed on 19/02/2024, 14:38:46
+Cleaning old data.... - performed on 19/02/2024, 14:38:47
+------------------ - performed on 19/02/2024, 14:38:47
+Fetching data - performed on 19/02/2024, 14:43:47
+Recording Data - performed on 19/02/2024, 14:43:48
+Checking data for user changes - performed on 19/02/2024, 14:43:49
+Cleaning old data.... - performed on 19/02/2024, 14:43:53
+------------------ - performed on 19/02/2024, 14:43:53
+Fetching data - performed on 19/02/2024, 14:48:53
+Recording Data - performed on 19/02/2024, 14:48:54
+Checking data for user changes - performed on 19/02/2024, 14:48:54
+Cleaning old data.... - performed on 19/02/2024, 14:48:55
+------------------ - performed on 19/02/2024, 14:48:56
+Fetching data - performed on 19/02/2024, 14:53:56
+Recording Data - performed on 19/02/2024, 14:53:57
+Checking data for user changes - performed on 19/02/2024, 14:53:57
+Cleaning old data.... - performed on 19/02/2024, 14:53:57
+------------------ - performed on 19/02/2024, 14:53:58
+Fetching data - performed on 19/02/2024, 14:58:58
+Recording Data - performed on 19/02/2024, 14:59:04
+Checking data for user changes - performed on 19/02/2024, 14:59:04
+Cleaning old data.... - performed on 19/02/2024, 14:59:05
+------------------ - performed on 19/02/2024, 14:59:05
+Fetching data - performed on 19/02/2024, 15:04:05
+Recording Data - performed on 19/02/2024, 15:04:06
+Checking data for user changes - performed on 19/02/2024, 15:04:06
+Cleaning old data.... - performed on 19/02/2024, 15:04:09
+------------------ - performed on 19/02/2024, 15:04:10
+Fetching data - performed on 19/02/2024, 15:09:10
+Recording Data - performed on 19/02/2024, 15:09:11
+Checking data for user changes - performed on 19/02/2024, 15:09:11
+Cleaning old data.... - performed on 19/02/2024, 15:09:11
+------------------ - performed on 19/02/2024, 15:09:12
+Fetching data - performed on 19/02/2024, 15:14:12
+Recording Data - performed on 19/02/2024, 15:14:12
+Checking data for user changes - performed on 19/02/2024, 15:14:12
+Cleaning old data.... - performed on 19/02/2024, 15:14:13
+------------------ - performed on 19/02/2024, 15:14:13
+Fetching data - performed on 19/02/2024, 15:19:13
+Recording Data - performed on 19/02/2024, 15:19:15
+Checking data for user changes - performed on 19/02/2024, 15:19:15
+Cleaning old data.... - performed on 19/02/2024, 15:19:16
+------------------ - performed on 19/02/2024, 15:19:16
+Fetching data - performed on 19/02/2024, 15:24:16
+Recording Data - performed on 19/02/2024, 15:24:17
+Checking data for user changes - performed on 19/02/2024, 15:24:17
+Cleaning old data.... - performed on 19/02/2024, 15:24:18
+------------------ - performed on 19/02/2024, 15:24:18
+Fetching data - performed on 19/02/2024, 15:29:20
+Recording Data - performed on 19/02/2024, 15:29:21
+Checking data for user changes - performed on 19/02/2024, 15:29:21
+Cleaning old data.... - performed on 19/02/2024, 15:29:22
+------------------ - performed on 19/02/2024, 15:29:22
+Fetching data - performed on 19/02/2024, 15:34:22
+Fetching data - performed on 19/02/2024, 15:36:03
+Recording Data - performed on 19/02/2024, 15:37:05
+Checking data for user changes - performed on 19/02/2024, 15:37:05
+Cleaning old data.... - performed on 19/02/2024, 15:37:06
+------------------ - performed on 19/02/2024, 15:37:06
+Fetching data - performed on 19/02/2024, 15:42:06
+Recording Data - performed on 19/02/2024, 15:42:07
+Checking data for user changes - performed on 19/02/2024, 15:42:07
+Cleaning old data.... - performed on 19/02/2024, 15:42:07
+------------------ - performed on 19/02/2024, 15:42:08
+Fetching data - performed on 19/02/2024, 15:47:08
+Recording Data - performed on 19/02/2024, 15:47:09
+Checking data for user changes - performed on 19/02/2024, 15:47:09
+Cleaning old data.... - performed on 19/02/2024, 15:47:10
+------------------ - performed on 19/02/2024, 15:47:10
+Fetching data - performed on 19/02/2024, 15:52:10
+Recording Data - performed on 19/02/2024, 15:52:11
+Checking data for user changes - performed on 19/02/2024, 15:52:11
+Cleaning old data.... - performed on 19/02/2024, 15:52:12
+------------------ - performed on 19/02/2024, 15:52:12
+Fetching data - performed on 19/02/2024, 15:57:12
+Recording Data - performed on 19/02/2024, 15:57:14
+Checking data for user changes - performed on 19/02/2024, 15:57:14
+Cleaning old data.... - performed on 19/02/2024, 15:57:15
+------------------ - performed on 19/02/2024, 15:57:15
+Fetching data - performed on 19/02/2024, 16:02:15
+Recording Data - performed on 19/02/2024, 16:02:16
+Checking data for user changes - performed on 19/02/2024, 16:02:16
+Cleaning old data.... - performed on 19/02/2024, 16:02:17
+------------------ - performed on 19/02/2024, 16:02:17
+Fetching data - performed on 19/02/2024, 16:07:17
+Recording Data - performed on 19/02/2024, 16:07:18
+Checking data for user changes - performed on 19/02/2024, 16:07:19
+Cleaning old data.... - performed on 19/02/2024, 16:07:19
+------------------ - performed on 19/02/2024, 16:07:20
+Fetching data - performed on 19/02/2024, 16:12:20
+Recording Data - performed on 19/02/2024, 16:12:21
+Checking data for user changes - performed on 19/02/2024, 16:12:21
+Cleaning old data.... - performed on 19/02/2024, 16:12:22
+------------------ - performed on 19/02/2024, 16:12:22
+Fetching data - performed on 19/02/2024, 16:17:22
+Recording Data - performed on 19/02/2024, 16:17:24
+Checking data for user changes - performed on 19/02/2024, 16:17:24
+Cleaning old data.... - performed on 19/02/2024, 16:17:25
+------------------ - performed on 19/02/2024, 16:17:26
+Fetching data - performed on 19/02/2024, 16:22:26
+Recording Data - performed on 19/02/2024, 16:22:26
+Checking data for user changes - performed on 19/02/2024, 16:22:27
+Cleaning old data.... - performed on 19/02/2024, 16:22:27
+------------------ - performed on 19/02/2024, 16:22:28
+Fetching data - performed on 19/02/2024, 16:27:28
+Recording Data - performed on 19/02/2024, 16:27:29
+Checking data for user changes - performed on 19/02/2024, 16:27:29
+Cleaning old data.... - performed on 19/02/2024, 16:27:30
+------------------ - performed on 19/02/2024, 16:27:30
+Fetching data - performed on 19/02/2024, 16:32:30
+Recording Data - performed on 19/02/2024, 16:32:32
+Checking data for user changes - performed on 19/02/2024, 16:32:33
+Cleaning old data.... - performed on 19/02/2024, 16:32:34
+------------------ - performed on 19/02/2024, 16:32:34
+Fetching data - performed on 19/02/2024, 16:37:34
+Recording Data - performed on 19/02/2024, 16:37:35
+Checking data for user changes - performed on 19/02/2024, 16:37:35
+Cleaning old data.... - performed on 19/02/2024, 16:37:36
+------------------ - performed on 19/02/2024, 16:37:36
+Fetching data - performed on 19/02/2024, 16:42:36
+Recording Data - performed on 19/02/2024, 16:42:37
+Checking data for user changes - performed on 19/02/2024, 16:42:37
+Cleaning old data.... - performed on 19/02/2024, 16:42:38
+------------------ - performed on 19/02/2024, 16:42:38
+Fetching data - performed on 19/02/2024, 16:47:38
+Recording Data - performed on 19/02/2024, 16:47:39
+Checking data for user changes - performed on 19/02/2024, 16:47:39
+Cleaning old data.... - performed on 19/02/2024, 16:47:40
+------------------ - performed on 19/02/2024, 16:47:40
+Fetching data - performed on 19/02/2024, 16:52:40
+Recording Data - performed on 19/02/2024, 16:52:41
+Checking data for user changes - performed on 19/02/2024, 16:52:41
+Cleaning old data.... - performed on 19/02/2024, 16:52:42
+------------------ - performed on 19/02/2024, 16:52:42
+Fetching data - performed on 19/02/2024, 16:57:42
+Recording Data - performed on 19/02/2024, 16:57:43
+Checking data for user changes - performed on 19/02/2024, 16:57:43
+Cleaning old data.... - performed on 19/02/2024, 16:57:44
+------------------ - performed on 19/02/2024, 16:57:44
+Fetching data - performed on 19/02/2024, 17:02:44
+Recording Data - performed on 19/02/2024, 17:02:45
+Checking data for user changes - performed on 19/02/2024, 17:02:45
+Cleaning old data.... - performed on 19/02/2024, 17:02:46
+------------------ - performed on 19/02/2024, 17:02:47
+Fetching data - performed on 19/02/2024, 17:07:47
+Recording Data - performed on 19/02/2024, 17:07:48
+Checking data for user changes - performed on 19/02/2024, 17:07:48
+Cleaning old data.... - performed on 19/02/2024, 17:07:49
+------------------ - performed on 19/02/2024, 17:07:49
+Fetching data - performed on 19/02/2024, 17:12:49
+Recording Data - performed on 19/02/2024, 17:12:50
+Checking data for user changes - performed on 19/02/2024, 17:12:50
+Cleaning old data.... - performed on 19/02/2024, 17:12:51
+------------------ - performed on 19/02/2024, 17:12:51
+Fetching data - performed on 19/02/2024, 17:17:51
+Recording Data - performed on 19/02/2024, 17:17:52
+Checking data for user changes - performed on 19/02/2024, 17:17:52
+Cleaning old data.... - performed on 19/02/2024, 17:17:53
+------------------ - performed on 19/02/2024, 17:17:53
+Fetching data - performed on 19/02/2024, 17:22:53
+Recording Data - performed on 19/02/2024, 17:22:54
+Checking data for user changes - performed on 19/02/2024, 17:22:54
+Cleaning old data.... - performed on 19/02/2024, 17:22:55
+------------------ - performed on 19/02/2024, 17:22:55
+Fetching data - performed on 19/02/2024, 17:27:55
+Recording Data - performed on 19/02/2024, 17:27:56
+Checking data for user changes - performed on 19/02/2024, 17:27:56
+Cleaning old data.... - performed on 19/02/2024, 17:28:01
+------------------ - performed on 19/02/2024, 17:28:02
+Fetching data - performed on 19/02/2024, 17:33:02
+Recording Data - performed on 19/02/2024, 17:33:03
+Checking data for user changes - performed on 19/02/2024, 17:33:03
+Cleaning old data.... - performed on 19/02/2024, 17:33:03
+------------------ - performed on 19/02/2024, 17:33:04
+Fetching data - performed on 19/02/2024, 17:38:04
+Recording Data - performed on 19/02/2024, 17:38:05
+Checking data for user changes - performed on 19/02/2024, 17:38:05
+Cleaning old data.... - performed on 19/02/2024, 17:38:05
+------------------ - performed on 19/02/2024, 17:38:06
+Fetching data - performed on 19/02/2024, 17:43:06
+Recording Data - performed on 19/02/2024, 17:43:07
+Checking data for user changes - performed on 19/02/2024, 17:43:07
+Cleaning old data.... - performed on 19/02/2024, 17:43:08
+------------------ - performed on 19/02/2024, 17:43:08
+Fetching data - performed on 19/02/2024, 17:48:08
+Recording Data - performed on 19/02/2024, 17:48:09
+Checking data for user changes - performed on 19/02/2024, 17:48:09
+Cleaning old data.... - performed on 19/02/2024, 17:48:10
+------------------ - performed on 19/02/2024, 17:48:10
+Fetching data - performed on 19/02/2024, 17:53:10
+Recording Data - performed on 19/02/2024, 17:53:11
+Checking data for user changes - performed on 19/02/2024, 17:53:11
+Cleaning old data.... - performed on 19/02/2024, 17:53:12
+------------------ - performed on 19/02/2024, 17:53:12
+Fetching data - performed on 19/02/2024, 17:58:12
+Recording Data - performed on 19/02/2024, 17:58:13
+Checking data for user changes - performed on 19/02/2024, 17:58:13
+Cleaning old data.... - performed on 19/02/2024, 17:58:14
+------------------ - performed on 19/02/2024, 17:58:14
+Fetching data - performed on 19/02/2024, 18:03:14
+Recording Data - performed on 19/02/2024, 18:03:16
+Checking data for user changes - performed on 19/02/2024, 18:03:16
+Cleaning old data.... - performed on 19/02/2024, 18:03:17
+------------------ - performed on 19/02/2024, 18:03:17
+Fetching data - performed on 19/02/2024, 18:08:17
+Recording Data - performed on 19/02/2024, 18:08:18
+Checking data for user changes - performed on 19/02/2024, 18:08:18
+Cleaning old data.... - performed on 19/02/2024, 18:08:24
+------------------ - performed on 19/02/2024, 18:08:24
+Fetching data - performed on 19/02/2024, 18:13:24
+Recording Data - performed on 19/02/2024, 18:13:25
+Checking data for user changes - performed on 19/02/2024, 18:13:25
+Cleaning old data.... - performed on 19/02/2024, 18:13:26
+------------------ - performed on 19/02/2024, 18:13:26
+Fetching data - performed on 19/02/2024, 18:18:26
+Recording Data - performed on 19/02/2024, 18:18:27
+Checking data for user changes - performed on 19/02/2024, 18:18:27
+Cleaning old data.... - performed on 19/02/2024, 18:18:28
+------------------ - performed on 19/02/2024, 18:18:29
+Fetching data - performed on 19/02/2024, 18:23:29
+Recording Data - performed on 19/02/2024, 18:23:30
+Checking data for user changes - performed on 19/02/2024, 18:23:30
+Cleaning old data.... - performed on 19/02/2024, 18:23:31
+------------------ - performed on 19/02/2024, 18:23:31
+Fetching data - performed on 19/02/2024, 18:28:31
+Recording Data - performed on 19/02/2024, 18:28:32
+Checking data for user changes - performed on 19/02/2024, 18:28:32
+Cleaning old data.... - performed on 19/02/2024, 18:28:33
+------------------ - performed on 19/02/2024, 18:28:33
+Fetching data - performed on 19/02/2024, 18:33:33
+Recording Data - performed on 19/02/2024, 18:33:34
+Checking data for user changes - performed on 19/02/2024, 18:33:34
+Cleaning old data.... - performed on 19/02/2024, 18:33:35
+------------------ - performed on 19/02/2024, 18:33:36
+Fetching data - performed on 19/02/2024, 18:38:36
+Recording Data - performed on 19/02/2024, 18:38:36
+Checking data for user changes - performed on 19/02/2024, 18:38:36
+Cleaning old data.... - performed on 19/02/2024, 18:38:37
+------------------ - performed on 19/02/2024, 18:38:37
+Fetching data - performed on 19/02/2024, 18:43:37
+Recording Data - performed on 19/02/2024, 18:43:38
+Checking data for user changes - performed on 19/02/2024, 18:43:38
+Cleaning old data.... - performed on 19/02/2024, 18:43:39
+------------------ - performed on 19/02/2024, 18:43:40
+Fetching data - performed on 19/02/2024, 18:48:40
+Recording Data - performed on 19/02/2024, 18:48:41
+Checking data for user changes - performed on 19/02/2024, 18:48:41
+Cleaning old data.... - performed on 19/02/2024, 18:48:42
+------------------ - performed on 19/02/2024, 18:48:42
+Fetching data - performed on 19/02/2024, 18:53:42
+Recording Data - performed on 19/02/2024, 18:53:43
+Checking data for user changes - performed on 19/02/2024, 18:53:43
+Cleaning old data.... - performed on 19/02/2024, 18:53:44
+------------------ - performed on 19/02/2024, 18:53:44
+Fetching data - performed on 19/02/2024, 18:58:44
+Recording Data - performed on 19/02/2024, 18:58:46
+Checking data for user changes - performed on 19/02/2024, 18:58:46
+Cleaning old data.... - performed on 19/02/2024, 18:58:53
+------------------ - performed on 19/02/2024, 18:58:53
+Fetching data - performed on 19/02/2024, 19:03:53
+Recording Data - performed on 19/02/2024, 19:03:54
+Checking data for user changes - performed on 19/02/2024, 19:03:54
+Cleaning old data.... - performed on 19/02/2024, 19:03:55
+------------------ - performed on 19/02/2024, 19:03:56
+Fetching data - performed on 19/02/2024, 19:08:56
+Recording Data - performed on 19/02/2024, 19:08:56
+Checking data for user changes - performed on 19/02/2024, 19:08:56
+Cleaning old data.... - performed on 19/02/2024, 19:09:03
+------------------ - performed on 19/02/2024, 19:09:03
+Fetching data - performed on 19/02/2024, 19:14:03
+Recording Data - performed on 19/02/2024, 19:14:05
+Checking data for user changes - performed on 19/02/2024, 19:14:05
+Cleaning old data.... - performed on 19/02/2024, 19:14:06
+------------------ - performed on 19/02/2024, 19:14:06
+Fetching data - performed on 19/02/2024, 19:19:06
+Recording Data - performed on 19/02/2024, 19:19:07
+Checking data for user changes - performed on 19/02/2024, 19:19:07
+Cleaning old data.... - performed on 19/02/2024, 19:19:08
+------------------ - performed on 19/02/2024, 19:19:08
+Fetching data - performed on 19/02/2024, 19:24:08
+Recording Data - performed on 19/02/2024, 19:24:09
+Checking data for user changes - performed on 19/02/2024, 19:24:09
+Cleaning old data.... - performed on 19/02/2024, 19:24:10
+------------------ - performed on 19/02/2024, 19:24:10
+Fetching data - performed on 19/02/2024, 19:29:10
+Recording Data - performed on 19/02/2024, 19:29:11
+Checking data for user changes - performed on 19/02/2024, 19:29:11
+Cleaning old data.... - performed on 19/02/2024, 19:29:18
+------------------ - performed on 19/02/2024, 19:29:18
+Fetching data - performed on 19/02/2024, 19:34:18
+Recording Data - performed on 19/02/2024, 19:34:19
+Checking data for user changes - performed on 19/02/2024, 19:34:19
+Cleaning old data.... - performed on 19/02/2024, 19:34:20
+------------------ - performed on 19/02/2024, 19:34:20
+Fetching data - performed on 19/02/2024, 19:39:20
+Recording Data - performed on 19/02/2024, 19:39:21
+Checking data for user changes - performed on 19/02/2024, 19:39:21
+Cleaning old data.... - performed on 19/02/2024, 19:39:22
+------------------ - performed on 19/02/2024, 19:39:22
+Fetching data - performed on 19/02/2024, 19:44:22
+Recording Data - performed on 19/02/2024, 19:44:23
+Checking data for user changes - performed on 19/02/2024, 19:44:23
+Cleaning old data.... - performed on 19/02/2024, 19:44:24
+------------------ - performed on 19/02/2024, 19:44:24
+Fetching data - performed on 19/02/2024, 19:49:24
+Recording Data - performed on 19/02/2024, 19:49:25
+Checking data for user changes - performed on 19/02/2024, 19:49:25
+Cleaning old data.... - performed on 19/02/2024, 19:49:32
+------------------ - performed on 19/02/2024, 19:49:32
+Fetching data - performed on 19/02/2024, 19:54:32
+Recording Data - performed on 19/02/2024, 19:54:33
+Checking data for user changes - performed on 19/02/2024, 19:54:33
+Cleaning old data.... - performed on 19/02/2024, 19:54:34
+------------------ - performed on 19/02/2024, 19:54:35
+Fetching data - performed on 19/02/2024, 19:59:35
+Recording Data - performed on 19/02/2024, 19:59:35
+Checking data for user changes - performed on 19/02/2024, 19:59:35
+Cleaning old data.... - performed on 19/02/2024, 19:59:36
+------------------ - performed on 19/02/2024, 19:59:37
+Fetching data - performed on 19/02/2024, 20:04:37
+Recording Data - performed on 19/02/2024, 20:04:38
+Checking data for user changes - performed on 19/02/2024, 20:04:38
+Cleaning old data.... - performed on 19/02/2024, 20:04:39
+------------------ - performed on 19/02/2024, 20:04:39
+Fetching data - performed on 19/02/2024, 20:09:39
+Recording Data - performed on 19/02/2024, 20:09:40
+Checking data for user changes - performed on 19/02/2024, 20:09:40
+Cleaning old data.... - performed on 19/02/2024, 20:09:46
+------------------ - performed on 19/02/2024, 20:09:46
+Fetching data - performed on 19/02/2024, 20:14:46
+Recording Data - performed on 19/02/2024, 20:14:47
+Checking data for user changes - performed on 19/02/2024, 20:14:47
+Cleaning old data.... - performed on 19/02/2024, 20:14:48
+------------------ - performed on 19/02/2024, 20:14:49
+Fetching data - performed on 19/02/2024, 20:19:49
+Recording Data - performed on 19/02/2024, 20:19:49
+Checking data for user changes - performed on 19/02/2024, 20:19:50
+Cleaning old data.... - performed on 19/02/2024, 20:19:51
+------------------ - performed on 19/02/2024, 20:19:51
+Fetching data - performed on 19/02/2024, 20:24:51
+Recording Data - performed on 19/02/2024, 20:24:52
+Checking data for user changes - performed on 19/02/2024, 20:24:52
+Cleaning old data.... - performed on 19/02/2024, 20:24:53
+------------------ - performed on 19/02/2024, 20:24:53
+Fetching data - performed on 19/02/2024, 20:29:53
+Recording Data - performed on 19/02/2024, 20:29:54
+Checking data for user changes - performed on 19/02/2024, 20:29:54
+Cleaning old data.... - performed on 19/02/2024, 20:30:00
+------------------ - performed on 19/02/2024, 20:30:00
+Fetching data - performed on 19/02/2024, 20:35:00
+Recording Data - performed on 19/02/2024, 20:35:01
+Checking data for user changes - performed on 19/02/2024, 20:35:01
+Cleaning old data.... - performed on 19/02/2024, 20:35:02
+------------------ - performed on 19/02/2024, 20:35:03
+Fetching data - performed on 19/02/2024, 20:40:03
+Recording Data - performed on 19/02/2024, 20:40:05
+Checking data for user changes - performed on 19/02/2024, 20:40:05
+Cleaning old data.... - performed on 19/02/2024, 20:40:06
+------------------ - performed on 19/02/2024, 20:40:06
+Fetching data - performed on 19/02/2024, 20:45:06
+Recording Data - performed on 19/02/2024, 20:45:07
+Checking data for user changes - performed on 19/02/2024, 20:45:07
+Cleaning old data.... - performed on 19/02/2024, 20:45:08
+------------------ - performed on 19/02/2024, 20:45:08
+Fetching data - performed on 19/02/2024, 20:50:08
+Recording Data - performed on 19/02/2024, 20:50:09
+Checking data for user changes - performed on 19/02/2024, 20:50:09
+Cleaning old data.... - performed on 19/02/2024, 20:50:10
+------------------ - performed on 19/02/2024, 20:50:11
+Fetching data - performed on 19/02/2024, 20:55:11
+Recording Data - performed on 19/02/2024, 20:55:11
+Checking data for user changes - performed on 19/02/2024, 20:55:12
+Cleaning old data.... - performed on 19/02/2024, 20:55:12
+------------------ - performed on 19/02/2024, 20:55:13
+Fetching data - performed on 19/02/2024, 21:00:13
+Recording Data - performed on 19/02/2024, 21:00:14
+Checking data for user changes - performed on 19/02/2024, 21:00:14
+Cleaning old data.... - performed on 19/02/2024, 21:00:15
+------------------ - performed on 19/02/2024, 21:00:15
+Fetching data - performed on 19/02/2024, 21:05:15
+Recording Data - performed on 19/02/2024, 21:05:16
+Checking data for user changes - performed on 19/02/2024, 21:05:16
+Cleaning old data.... - performed on 19/02/2024, 21:05:17
+------------------ - performed on 19/02/2024, 21:05:17
+Fetching data - performed on 19/02/2024, 21:10:17
+Recording Data - performed on 19/02/2024, 21:10:18
+Checking data for user changes - performed on 19/02/2024, 21:10:18
+Cleaning old data.... - performed on 19/02/2024, 21:10:19
+------------------ - performed on 19/02/2024, 21:10:20
+Fetching data - performed on 19/02/2024, 21:15:20
+Recording Data - performed on 19/02/2024, 21:15:21
+Checking data for user changes - performed on 19/02/2024, 21:15:21
+Cleaning old data.... - performed on 19/02/2024, 21:15:22
+------------------ - performed on 19/02/2024, 21:15:22
+Fetching data - performed on 19/02/2024, 21:20:22
+Recording Data - performed on 19/02/2024, 21:20:23
+Checking data for user changes - performed on 19/02/2024, 21:20:23
+Cleaning old data.... - performed on 19/02/2024, 21:20:24
+------------------ - performed on 19/02/2024, 21:20:24
+Fetching data - performed on 19/02/2024, 21:25:24
+Recording Data - performed on 19/02/2024, 21:25:25
+Checking data for user changes - performed on 19/02/2024, 21:25:25
+Cleaning old data.... - performed on 19/02/2024, 21:25:26
+------------------ - performed on 19/02/2024, 21:25:26
+Fetching data - performed on 19/02/2024, 21:30:26
+Recording Data - performed on 19/02/2024, 21:30:27
+Checking data for user changes - performed on 19/02/2024, 21:30:27
+Cleaning old data.... - performed on 19/02/2024, 21:30:28
+------------------ - performed on 19/02/2024, 21:30:29
+Fetching data - performed on 19/02/2024, 21:35:29
+Recording Data - performed on 19/02/2024, 21:35:30
+Checking data for user changes - performed on 19/02/2024, 21:35:30
+Cleaning old data.... - performed on 19/02/2024, 21:35:31
+------------------ - performed on 19/02/2024, 21:35:32
+Fetching data - performed on 19/02/2024, 21:40:32
+Recording Data - performed on 19/02/2024, 21:40:33
+Checking data for user changes - performed on 19/02/2024, 21:40:33
+Cleaning old data.... - performed on 19/02/2024, 21:40:34
+------------------ - performed on 19/02/2024, 21:40:34
+Fetching data - performed on 19/02/2024, 21:45:34
+Recording Data - performed on 19/02/2024, 21:45:35
+Checking data for user changes - performed on 19/02/2024, 21:45:35
+Cleaning old data.... - performed on 19/02/2024, 21:45:36
+------------------ - performed on 19/02/2024, 21:45:36
+Fetching data - performed on 19/02/2024, 21:50:36
+Recording Data - performed on 19/02/2024, 21:50:37
+Checking data for user changes - performed on 19/02/2024, 21:50:37
+Cleaning old data.... - performed on 19/02/2024, 21:50:38
+------------------ - performed on 19/02/2024, 21:50:39
+Fetching data - performed on 19/02/2024, 21:55:39
+Recording Data - performed on 19/02/2024, 21:55:41
+Checking data for user changes - performed on 19/02/2024, 21:55:41
+Cleaning old data.... - performed on 19/02/2024, 21:55:42
+------------------ - performed on 19/02/2024, 21:55:42
+Fetching data - performed on 19/02/2024, 22:00:42
+Recording Data - performed on 19/02/2024, 22:00:43
+Checking data for user changes - performed on 19/02/2024, 22:00:43
+Cleaning old data.... - performed on 19/02/2024, 22:00:44
+------------------ - performed on 19/02/2024, 22:00:45
+Fetching data - performed on 19/02/2024, 22:05:45
+Recording Data - performed on 19/02/2024, 22:05:46
+Checking data for user changes - performed on 19/02/2024, 22:05:46
+Cleaning old data.... - performed on 19/02/2024, 22:05:47
+------------------ - performed on 19/02/2024, 22:05:47
+Fetching data - performed on 19/02/2024, 22:10:47
+Recording Data - performed on 19/02/2024, 22:10:48
+Checking data for user changes - performed on 19/02/2024, 22:10:48
+Cleaning old data.... - performed on 19/02/2024, 22:10:49
+------------------ - performed on 19/02/2024, 22:10:50
+Fetching data - performed on 19/02/2024, 22:15:50
+Recording Data - performed on 19/02/2024, 22:15:51
+Checking data for user changes - performed on 19/02/2024, 22:15:51
+Cleaning old data.... - performed on 19/02/2024, 22:15:52
+------------------ - performed on 19/02/2024, 22:15:53
+Fetching data - performed on 19/02/2024, 22:20:53
+Recording Data - performed on 19/02/2024, 22:21:01
+Checking data for user changes - performed on 19/02/2024, 22:21:01
+Cleaning old data.... - performed on 19/02/2024, 22:21:03
+------------------ - performed on 19/02/2024, 22:21:03
+Fetching data - performed on 19/02/2024, 22:26:03
+Recording Data - performed on 19/02/2024, 22:26:04
+Checking data for user changes - performed on 19/02/2024, 22:26:04
+Cleaning old data.... - performed on 19/02/2024, 22:26:05
+------------------ - performed on 19/02/2024, 22:26:06

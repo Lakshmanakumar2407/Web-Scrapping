@@ -1,5 +1,6 @@
 import os, csv, pytz
 import datetime as dt 
+import common_utilities as cu
 
 # UNCOMMENT THE BELOW CODE ONLY WHEN YOU ARE RUNNING THIS FILE DIRECTLY AND THE CODE AT IF BLOCK BELOW
 # wd = os.getcwd()
@@ -9,6 +10,8 @@ import datetime as dt
 def record_data(fields_to_record):
     # print('Entered coinmarket write')
     global fetched_date_time_raw
+
+    cu.activity_logger('Recording Data')
 
     try: 
         with open('index.csv') as index:

@@ -1,6 +1,8 @@
 import datetime as dt
 import os
 import smtplib
+import config
+
 
 # print(os.getcwd())
 
@@ -13,10 +15,25 @@ def error_logger(error, msg):
 
     time_at_calling = dt.datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
     try:
-        with open('er_logger.txt', 'a', newline='') as log:
-            log.write(f'{error.__name__} occurred at {time_at_calling} - {msg}')
+        with open('error_logger.txt', 'a', newline='') as log:
+            log.write(f'{error.__name__} occurred at {time_at_calling} - {msg}\n')
     except FileNotFoundError:
-        with open('er_logger.txt', 'w', newline='') as log:
-            log.write(f'{error.__name__} occurred at {time_at_calling} - {msg}')
+        with open('error_logger.txt', 'w', newline='') as log:
+            log.write(f'{error.__name__} occurred at {time_at_calling} - {msg}\n')
 
-    print("Error logged - check for detailed info at er_logger.txt")
+
+def send_email(message, *args):
+
+    with smtplib.SMTP_SSL(config.smtp_server, config.smtp_port) as emailer:
+        emailer.login(config.email_address, config.password)
+        emailer.sendmail(config.email_address, config.email_address, message)
+
+
+def activity_logger(message):
+    time_at_calling = dt.datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
+    try:
+        with open('activity_logger.txt', 'a', newline='') as log:
+            log.write(f'{message} - performed on {time_at_calling}\n')
+    except FileNotFoundError:
+        with open('activity_logger.txt', 'w', newline='') as log:
+            log.write(f'{message} - performed on {time_at_calling}\n')

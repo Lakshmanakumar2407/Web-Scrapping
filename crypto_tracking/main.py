@@ -4,6 +4,7 @@ import coinmarket_scrape as cs
 import coinmarket_write as cw
 import store_analyse as sa
 import store_maintainer as sm
+import common_utilities as cu
 import config
 
 def main():
@@ -25,6 +26,8 @@ def main():
 
     sm.store_cleaner(config.max_time_to_store)
 
+    cu.activity_logger('------------------')
+
     os.chdir(current_directory)
     # print(os.getcwd())
     print(f'Last executed on {dt.datetime.now().strftime("%d/%m/%Y, %H:%M:%S")}')
@@ -34,4 +37,4 @@ def main():
 if __name__ == "__main__":
     while True:
         main()
-        time.sleep(10)
+        time.sleep(300)

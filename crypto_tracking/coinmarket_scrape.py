@@ -1,4 +1,6 @@
 import os, requests, json, csv, datetime, time
+import config
+import common_utilities as cu
 
 # UNCOMMENT THE BELOW CODE ONLY WHEN YOU ARE RUNNING THIS FILE DIRECTLY AND THE CODE AT IF BLOCK BELOW
 # pd = os.getcwd()
@@ -10,6 +12,8 @@ import os, requests, json, csv, datetime, time
 
 def fetch():
     global fetched_date
+
+    cu.activity_logger('Fetching data')
 
     # print('Entering_fetch')
     url = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/listing"
@@ -28,20 +32,28 @@ def fetch():
     list_of_dict = json_parse(response)
     write_data(list_of_dict)
 
+    # cu.activity_logger('Exited fetch()')
+
 def fetch_data(url, params):
     session = requests.session()
-    # max_retries = 5
-    # for _ in range(max_retries):
-    #     try:
-    #         response = session.get(url, params=params, timeout=10).json()
-    #         return response
-    #     except TimeoutError:
-    #         time.sleep(30)
-    #         continue
-    #     except ConnectionError:
-    #         raise ConnectionError
-    response = session.get(url, params=params, timeout=10).json()
-    return response
+
+    for _ in range(config.max_retries):
+        try:
+            response = session.get(url, params=params, timeout=10).json()
+            return response
+        except TimeoutError as te:
+            cu.error_logger(TimeoutError, te)
+            print('Retrying after 30 seconds')
+            time.sleep(30)
+            continue
+        except requests.exceptions.ConnectionError as ce:
+            cu.error_logger(ConnectionError, ce)
+            print(f'{ConnectionError} occurred, retring after 1 minute')
+            time.sleep(60)
+            continue
+
+    cu.send_email("Hey, \n It seems like we can't fetch data. There might be some connection issues")
+    cu.activity_logger("Email sent because of Connectivity Issue")
 
 
 def json_parse(response_object):
