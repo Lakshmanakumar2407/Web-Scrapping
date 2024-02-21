@@ -70,6 +70,7 @@ def analyse_filter(list_of_crypto_to_track, dict_with_params):
     master_dict = dict()
 
     for crypto in list_of_crypto_to_track:
+        # print(crypto)
         filtered_time_dod = filter_data_user(crypto, paramsdict_wih_index)
         filtered_percent_dod = user_percent_filter(filtered_time_dod, paramsdict_wih_index)
 
@@ -138,26 +139,30 @@ def user_percent_filter(some_dod, dict_with_usr_params_and_vals):
     percent_filtered_dod = dict() # this will be returned
 
     for index, params in enumerate(dict_with_usr_params_and_vals):
-        user_percent_diff = dict_with_usr_params_and_vals[params][0]
-        percent_filtered_dod[params] = {}
-        prev_val = None
+        # print(params)
+        try:
+            user_percent_diff = dict_with_usr_params_and_vals[params][0]
+            percent_filtered_dod[params] = {}
+            prev_val = None
 
-        for time, value in some_dod[params].items():
-            c_value = round(float(value),20)
-            
-            if prev_val is None:
+            for time, value in some_dod[params].items():
+                c_value = round(float(value),20)
+                
+                if prev_val is None:
+                    prev_val = c_value
+                    continue
+
+                percent_diff = (c_value - prev_val)/prev_val*100
+                # print(params, percent_diff, prev_val, c_value, time)
+                
+                if (user_percent_diff>0 and percent_diff >= user_percent_diff) or \
+                    (user_percent_diff<0 and percent_diff <= user_percent_diff):
+                    percent_filtered_dod[params].update({time:[c_value, prev_val, percent_diff]})
+                    # print(time, c_value, prev_val)
                 prev_val = c_value
-                continue
-
-            percent_diff = (c_value - prev_val)/prev_val*100
-            # print(params, percent_diff, prev_val, c_value, time)
-            
-            if (user_percent_diff>0 and percent_diff >= user_percent_diff) or \
-                (user_percent_diff<0 and percent_diff <= user_percent_diff):
-                percent_filtered_dod[params].update({time:[c_value, prev_val, percent_diff]})
-                # print(time, c_value, prev_val)
-            prev_val = c_value
-            # print(prev_val, c_value)
+                # print(prev_val, c_value)
+        except KeyError:
+            continue
     
     return percent_filtered_dod
 
