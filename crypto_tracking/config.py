@@ -19,7 +19,7 @@ def files_to_track():
 
 user_tracking_dict = {'price':[3, 10], 'volume24':[3.0, 20]}
 
-max_time_to_store = 1
+max_time_to_store = 5
 
 
 
