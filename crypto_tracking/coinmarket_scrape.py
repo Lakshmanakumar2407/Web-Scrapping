@@ -41,7 +41,7 @@ def fetch_data(url, params):
         try:
             response = session.get(url, params=params, timeout=10).json()
             return response
-        except TimeoutError as te:
+        except requests.exceptions.ReadTimeout as te:
             cu.error_logger(TimeoutError, te)
             print('Retrying after 30 seconds')
             time.sleep(30)
