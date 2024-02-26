@@ -1,4 +1,4 @@
-import random, re, subprocess
+import random, re, subprocess, time
 import requests
 from bs4 import BeautifulSoup
 
@@ -13,9 +13,11 @@ class NovelScraper:
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
     ]
 
+    default_start_number = 1
+    extremely_large_number = 1000000000000000
+
     def __init__(self, url,
-                 selected_option: str = None,
-                 starting_number: int = 1, 
+                 starting_number: int = None, 
                  ending_number: int =None, 
                  output_format: str = None,
                  headers=None) :
@@ -24,14 +26,14 @@ class NovelScraper:
         Contains some of the required attributes some which are passed by the user otherwise, initialised for internal usage
         '''
         self.site_url: str = url
-        self.selected_option: str = selected_option
         self.starting_number: int = starting_number
         self.ending_number: int = ending_number
         self.output_format: str = output_format
         self.headers: dict = headers or {'User-Agent':random.choice(NovelScraper.list_of_ua)}
         self.session = None
-        self.soup = None
+        self.params: dict = None
         self.payload: dict = None
+        self.soup = None
         self.chapter_url_dict: dict = None
 
     def _create_session(self):
@@ -44,7 +46,12 @@ class NovelScraper:
                 self._create_session()
 
             url = url or self.site_url
-            response = self.session.request(method, url, headers=self.headers, data= self.payload, timeout=10)
+            response = self.session.request(method, 
+                                            url, 
+                                            headers=self.headers, 
+                                            params=self.params,
+                                            data= self.payload, 
+                                            timeout=10)
             response.raise_for_status()
         except requests.exceptions.RequestException as e:
             print(f'Error occured when fetching the url :{self.site_url}')
@@ -75,6 +82,7 @@ class NovelScraper:
         return None
     
     def create_md(self):
+        self.get_novel_details()
         self.get_chapter_list()
         self._touch_doc()
 
@@ -115,8 +123,8 @@ class ChapterListExhausted(Exception):
 class NovelFull(NovelScraper):
 
     def __init__(self, url: str, 
-                 starting_number: int= 1, 
-                 ending_number: int = None, 
+                 starting_number: int= NovelScraper.default_start_number, 
+                 ending_number: int = NovelScraper.extremely_large_number, 
                  output_format: str = None, 
                  header: dict = None):
         super().__init__(url, starting_number, ending_number, output_format, header)
@@ -159,21 +167,27 @@ class NovelFull(NovelScraper):
 
     def _fetch_chapter_url_from_page(self): 
 
-        self.soup = self._get_html_response()
+        self._get_html_response()
 
-        pattern = r'Chapter (\d+)'
+        pattern = r'(\w*)\s(\d+)'
         chpter = (self.soup.find('div', attrs={"class":"col-xs-12", "id":"list-chapter"})).find_all('a', attrs={'href':True, 'title':True})
         
         for chp in chpter:
             match = re.search(pattern, chp.text)
-            chapter_num = int(match.group(1))
-            if self.ending_number is not None:
-                if chapter_num in NovelScraper.inclusive_range(self.starting_number, self.ending_number):
-                    self.chapter_url_dict[chp.get_text()] = self.base_url+chp['href']
-                if chapter_num == self.ending_number:
+            chapter_num = int(match.group(2))
+            chapter_name = chp.get_text()
+            chapter_link = self.base_url+chp['href']
+
+            if self.starting_number != NovelScraper.default_start_number or \
+                self.ending_number != NovelScraper.extremely_large_number:
+
+                if self.starting_number <= chapter_num <= self.ending_number:
+                    self.chapter_url_dict[chapter_name] = chapter_link
+
+                if chapter_num > self.ending_number:
                     raise ChapterListExhausted
             else:
-                self.chapter_url_dict[chp.get_text()] = self.base_url+chp['href']
+                self.chapter_url_dict[chapter_name] = chapter_link
 
     def create_md(self):
         super().create_md()
@@ -188,8 +202,8 @@ class NovelFull(NovelScraper):
 
 class AnimeDaily(NovelScraper):
     def __init__(self, url, 
-                 starting_number: int=1, 
-                 ending_number: int=None, 
+                 starting_number: int=NovelScraper.default_start_number, 
+                 ending_number: int= NovelScraper.extremely_large_number, 
                  output_format: str=None, 
                  headers=None):
         super().__init__(url, starting_number, ending_number, output_format, headers)
@@ -242,7 +256,7 @@ class AnimeDaily(NovelScraper):
 
             print(f'fetching chapters from page - {page_num}')
             try:
-                if page_num<6: self._fetch_chapter_url_from_page()
+                self._fetch_chapter_url_from_page()
             except ChapterListExhausted:
                 break
 
@@ -261,14 +275,18 @@ class AnimeDaily(NovelScraper):
             chapter_link = (link['href']).split('"')[1]
             chapter_link = re.sub(r"\\/", '/',chapter_link)[:-1]
             
-            pattern = r'(.*) (\d+)'
+            # pattern = r'(\w*)\s(\d+)'
+            pattern = r'([^0-9]*)\s0*(\d+)\b'
             match = re.match(pattern,chapter_name)
             chapter_num = int(match.group(2))
 
-            if self.ending_number is not None:
-                if chapter_num in NovelScraper.inclusive_range(self.starting_number, self.ending_number):
+            if self.starting_number != NovelScraper.default_start_number or \
+                self.ending_number != NovelScraper.extremely_large_number:
+
+                if self.starting_number <= chapter_num <= self.ending_number:
                     self.chapter_url_dict[chapter_name] = chapter_link
-                if chapter_num==self.ending_number:
+
+                if chapter_num > self.ending_number:
                     raise ChapterListExhausted
             else:
                 self.chapter_url_dict[chapter_name] = chapter_link
@@ -286,39 +304,98 @@ class AnimeDaily(NovelScraper):
 
 
 class NovelBin(NovelScraper):
-    def __init__(self, url, 
-                 selected_option: str = None, 
-                 starting_number: int = 1, 
-                 ending_number: int = None, 
+    def __init__(self, url,  
+                 starting_number: int = NovelScraper.default_start_number, 
+                 ending_number: int = NovelScraper.extremely_large_number, 
                  output_format: str = None, 
                  headers=None):
-        super().__init__(url, selected_option, starting_number, ending_number, output_format, headers)
+        super().__init__(url, starting_number, ending_number, output_format, headers)
         self.novel_id: str = None
+        self.secret_url = "https://novelbin.com/ajax/chapter-archive"
 
     def get_novel_details(self):
         super().get_novel_details()
 
         self.novel_name = self.soup.find('h3', class_ = "title").get_text()
         self.author = (self.soup.find('h3', string= 'Author:')).find_next_sibling('a').text.strip()
-        print(self.novel_name, self.author)
+        
+        return self.novel_name, self.author
 
+    def _get_novel_id(self):
+        pattern = r'/b/(\w+(?:-\w+)*)'
+        match = re.search(pattern, self.site_url)
+        self.novel_id = match.group(1)
 
+        return self.novel_id
+    
+    def _get_secret_page(self):
+        self._get_novel_id()
+
+        s_url = self.secret_url
+        self.params = {
+            'novelId':self.novel_id
+        }
+        self._get_html_response(url=s_url)
+        
+        return None
+
+    def get_chapter_list(self):
+        self._get_secret_page()
+        self.chapter_url_dict = dict()
+
+        chapters = self.soup.find_all('a', attrs={'href':True, 'title':True})
+        for chp in chapters:
+            chapter_name = chp['title']
+            chapter_link = chp['href']
+
+            if  self.starting_number != NovelScraper.default_start_number or \
+                self.ending_number != NovelScraper.extremely_large_number:
+
+                pattern = r'([^0-9]*)\s0*(\d+)\b'
+                # pattern = r'\b\s*(?:Chapter|Book|Volume|:)\s*0*(\d+)\b'
+                match = re.match(pattern, chapter_name)
+                chapter_num = int((match.group(2)))
+                # print(chapter_num, chapter_name)
+
+                if self.starting_number <= chapter_num <= self.ending_number:
+                    self.chapter_url_dict[chapter_name] = chapter_link
+
+                if chapter_num > self.ending_number:
+                    # print('breakng')
+                    break
+            else:
+                self.chapter_url_dict[chp['title']] = chp['href']
+
+        return self.chapter_url_dict
+
+    def create_md(self):
+        super().create_md()
+
+        i = 1
+        for chapter_name, chapter_link in self.chapter_url_dict.items():
+            self.chapter_name = chapter_name
+            self._get_html_response(url=chapter_link)
+            time.sleep(2)
+            self.content = self.soup.find_all('p')[1:]
+            self._write_doc()
+            print(f'Wrote chapter - {chapter_name}')
 
 
 novel_full_url: str = "https://novelfull.com/absolute-resonance.html"
 anime_daily_url: str = "https://animedaily.net/absolute-resonance-novel.html"
-novel_bin_url: str = "https://novelbin.com/b/coiling-dragon"
+novel_bin_url: str = "https://novelbin.com/b/absolute-resonance"
+# novel_bin_url: str = "https://novelbin.com/b/god-rank-upgrade-system#tab-chapters-title"
 
 absolute_res_nf = NovelFull(novel_full_url, starting_number=34, ending_number=60)
+# print(absolute_res_nf.ending_number, absolute_res_nf.starting_number)
 # x = absolute_res_nf.get_chapter_list()
-# print(x)
 
-absolute_res_ad = AnimeDaily(anime_daily_url,ending_number=60)
+absolute_res_ad = AnimeDaily(anime_daily_url,starting_number=18, ending_number=60)
 
-# x = absolute_res_ad.get_novel_details()
-# print(x)
-# print(absolute_res_ad.starting_number)
+# x = absolute_res_ad.get_chapter_list()
 # absolute_res_ad.get_final()
 
-coiling_drag_nb = NovelBin(novel_bin_url)
-coiling_drag_nb.get_novel_details()
+coiling_drag_nb = NovelBin(novel_bin_url, 1, 100, 'pdf')
+x = coiling_drag_nb.get_chapter_list()
+# print(x)
+# coiling_drag_nb.get_final()
