@@ -351,7 +351,7 @@ class NovelBin(NovelScraper):
             if  self.starting_number != NovelScraper.default_start_number or \
                 self.ending_number != NovelScraper.extremely_large_number:
 
-                pattern = r'([^0-9]*)\s0*(\d+)\b'
+                pattern = r'([^0-9]*)\s*0*(\d+)\b'
                 # pattern = r'\b\s*(?:Chapter|Book|Volume|:)\s*0*(\d+)\b'
                 match = re.match(pattern, chapter_name)
                 chapter_num = int((match.group(2)))
@@ -371,7 +371,6 @@ class NovelBin(NovelScraper):
     def create_md(self):
         super().create_md()
 
-        i = 1
         for chapter_name, chapter_link in self.chapter_url_dict.items():
             self.chapter_name = chapter_name
             self._get_html_response(url=chapter_link)
@@ -381,10 +380,68 @@ class NovelBin(NovelScraper):
             print(f'Wrote chapter - {chapter_name}')
 
 
+class FreeWebNovel(NovelScraper):
+    def __init__(self, 
+                 url, 
+                 starting_number: int = NovelScraper.default_start_number, 
+                 ending_number: int = NovelScraper.extremely_large_number, 
+                 output_format: str = None, 
+                 headers=None):
+        super().__init__(url, starting_number, ending_number, output_format, headers)
+        self.base_url: str = "https://freewebnovel.com" 
+        self.chapter_url: str = None
+
+    def get_novel_details(self):
+        super().get_novel_details()
+
+        self.novel_name = self.soup.find('h3', class_ = "tit").get_text()
+        self.author = self.soup.find('a', class_ = 'a1', attrs={'href':True, 'title':True}).get_text()
+
+        return self.novel_name, self.author
+    
+    def get_chapter_list(self):
+        self.get_novel_details()
+        self.chapter_url_dict = dict()
+
+        chapter_list = (self.soup.find('div', class_ = "m-newest2")).find_all('a', class_ = "con", attrs={"href":True, "title":True})
+
+        for chapter in chapter_list:
+            chapter_name: str = chapter.get_text()
+            self.chapter_url = self.base_url + chapter['href']
+
+            if self.starting_number != NovelScraper.default_start_number or \
+                self.ending_number != NovelScraper.extremely_large_number:
+                
+                pattern = r'([^0-9]*)\s*0*(\d+)\b'
+                match = re.match(pattern, chapter_name)
+                chapter_num: int = int(match.group(2))
+
+                if self.starting_number <= chapter_num <= self.ending_number:
+                    self.chapter_url_dict[chapter_name] = self.chapter_url
+
+                if chapter_num > self.ending_number:
+                    break
+
+            else:
+                self.chapter_url_dict[chapter_name] = self.chapter_url
+
+        return self.chapter_url_dict
+
+    def create_md(self):
+        super().create_md()
+
+        for chapter_name, chapter_link in self.chapter_url_dict.items():
+            self.chapter_name = chapter_name
+            self._get_html_response(url=chapter_link)
+            self.content = self.soup.find_all('p')[1:-1]
+            self._write_doc()
+            print(f'Finished Writing chapter - {chapter_name}')
+            
+
 novel_full_url: str = "https://novelfull.com/absolute-resonance.html"
 anime_daily_url: str = "https://animedaily.net/absolute-resonance-novel.html"
 novel_bin_url: str = "https://novelbin.com/b/absolute-resonance"
-# novel_bin_url: str = "https://novelbin.com/b/god-rank-upgrade-system#tab-chapters-title"
+free_web_novel_url : str = "https://freewebnovel.com/divine-throne-of-primordial-blood.html"
 
 absolute_res_nf = NovelFull(novel_full_url, starting_number=34, ending_number=60)
 # print(absolute_res_nf.ending_number, absolute_res_nf.starting_number)
@@ -395,7 +452,10 @@ absolute_res_ad = AnimeDaily(anime_daily_url,starting_number=18, ending_number=6
 # x = absolute_res_ad.get_chapter_list()
 # absolute_res_ad.get_final()
 
-coiling_drag_nb = NovelBin(novel_bin_url, 1, 100, 'pdf')
-x = coiling_drag_nb.get_chapter_list()
+coiling_drag_nb = NovelBin(novel_bin_url, 11, 100, 'pdf')
+# x = coiling_drag_nb.get_chapter_list()
 # print(x)
 # coiling_drag_nb.get_final()
+
+free_web_novel_n = FreeWebNovel(free_web_novel_url, ending_number=1, output_format='epub')
+free_web_novel_n.get_final()
