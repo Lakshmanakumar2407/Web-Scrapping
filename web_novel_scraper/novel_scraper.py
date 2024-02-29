@@ -71,8 +71,14 @@ class NovelScraper:
         self.novel_name: str = None
         self.author: str = None
 
+    def chapter_renamer(self):
+        if ":" in self.novel_name:
+            self.novel_name = self.novel_name.replace(':','-')
+
     def _touch_doc(self):
-        with open(f'{self.novel_name}.md','w', encoding="utf-8") as novel:
+        self. chapter_renamer()
+
+        with open(f"{self.novel_name}.md",'w', encoding="utf-8") as novel:
             novel.write(f'# {self.novel_name} \n\n')
             novel.write(f'*{self.author}* \n\n')
         
@@ -90,6 +96,7 @@ class NovelScraper:
         with open(f'{self.novel_name}.md','a', encoding="utf-8") as novel:
             novel.write(f'## {self.chapter_name}\n\n')
             for content in self.content:
+                novel.write('\n')
                 novel.write(content.get_text())
                 novel.write('\n')
             novel.write("\n\n")
@@ -301,6 +308,7 @@ class AnimeDaily(NovelScraper):
             self.chapter_name = chapter_name
             self.content = self.soup.find_all('p')[:-3]
             self._write_doc()
+            print(f'Finsihed writing - {self.chapter_name}')
 
 
 class NovelBin(NovelScraper):
@@ -438,17 +446,77 @@ class FreeWebNovel(NovelScraper):
             print(f'Finished Writing chapter - {chapter_name}')
             
 
+class BoxNovel(NovelScraper):
+    def __init__(self, 
+                 url, 
+                 starting_number: int = NovelScraper.default_start_number, 
+                 ending_number: int = NovelScraper.extremely_large_number, 
+                 output_format: str = None, 
+                 headers=None):
+        super().__init__(url, starting_number, ending_number, output_format, headers)
+        self.chapter_url: str = ""
+
+    def get_novel_details(self):
+        super().get_novel_details()
+
+        self.novel_name = self.soup.find('div', class_ = "post-title").find('h1').get_text().strip()
+        self.author = self.soup.find('div', class_ = "author-content").get_text().strip()
+
+        return self.novel_name, self.author
+
+    def get_chapter_list(self):
+        self.get_novel_details()
+        self.chapter_url_dict = dict()
+        url_to_pass = self.site_url+'ajax/'+'chapters'
+
+        self._get_html_response(method='POST', url=url_to_pass)
+        chapters = self.soup.find_all('a', attrs={'href':True, 'title':False})
+        chapters.reverse() # in  this webpage, Latest is structued first
+        
+        for chapter in chapters:
+            chapter_name = chapter.get_text().strip()
+            chapter_link = chapter['href']
+
+            if self.starting_number != NovelScraper.default_start_number or \
+                self.ending_number != NovelScraper.extremely_large_number:
+
+                pattern = r'([^0-9]*)\s*0*(\d+)\b'
+                match = re.match(pattern, chapter_name)
+                chapter_num: int = int(match.group(2))
+
+                if self.starting_number <= chapter_num <= self.ending_number:
+                    self.chapter_url_dict[chapter_name] = chapter_link
+
+                if chapter_num > self.ending_number:
+                    break
+
+        return self.chapter_url_dict
+
+    def create_md(self):
+        super().create_md()
+
+        for chapter, link in self.chapter_url_dict.items():
+            self.chapter_name = chapter
+            self._get_html_response(url=link)
+            self.content = self.soup.find('div', class_ = 'text-left').find_all('p')[1:]
+            self._write_doc()
+            print(f'Finsihed writing - {self.chapter_name}')
+
+
+
+
 novel_full_url: str = "https://novelfull.com/absolute-resonance.html"
 anime_daily_url: str = "https://animedaily.net/absolute-resonance-novel.html"
 novel_bin_url: str = "https://novelbin.com/b/absolute-resonance"
 free_web_novel_url : str = "https://freewebnovel.com/divine-throne-of-primordial-blood.html"
+box_novel_url: str = "https://boxnovel.com/novel/top-tier-providence-secretly-cultivate-for-a-thousand-years/"
+
 
 absolute_res_nf = NovelFull(novel_full_url, starting_number=34, ending_number=60)
 # print(absolute_res_nf.ending_number, absolute_res_nf.starting_number)
 # x = absolute_res_nf.get_chapter_list()
 
-absolute_res_ad = AnimeDaily(anime_daily_url,starting_number=18, ending_number=60)
-
+absolute_res_ad = AnimeDaily(anime_daily_url,starting_number=18, ending_number=30, output_format='epub')
 # x = absolute_res_ad.get_chapter_list()
 # absolute_res_ad.get_final()
 
@@ -458,4 +526,11 @@ coiling_drag_nb = NovelBin(novel_bin_url, 11, 100, 'pdf')
 # coiling_drag_nb.get_final()
 
 free_web_novel_n = FreeWebNovel(free_web_novel_url, ending_number=1, output_format='epub')
-free_web_novel_n.get_final()
+# free_web_novel_n.get_final()
+
+box_novel_n = BoxNovel(box_novel_url, 1, 10,'pdf')
+# box_novel_n.create_md()
+# box_novel_n.get_final()
+# x = box_novel_n.get_novel_details()
+print(box_novel_n)
+# box_novel_n._touch_doc()
