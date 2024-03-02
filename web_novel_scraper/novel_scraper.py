@@ -205,6 +205,7 @@ class NovelFull(NovelScraper):
             self.chapter_name = chp_name
             self.content = self.soup.find_all('p')[3:-1]
             self._write_doc()
+            time.sleep(2)
 
 
 class AnimeDaily(NovelScraper):
@@ -505,25 +506,26 @@ class BoxNovel(NovelScraper):
 
 
 
-novel_full_url: str = "https://novelfull.com/absolute-resonance.html"
+novel_full_url: str = "https://novelfull.com/battle-through-the-heavens.html"
 anime_daily_url: str = "https://animedaily.net/absolute-resonance-novel.html"
-novel_bin_url: str = "https://novelbin.com/b/absolute-resonance"
+novel_bin_url: str = "https://novelbin.com/b/battle-through-the-heavens-novel"
 free_web_novel_url : str = "https://freewebnovel.com/divine-throne-of-primordial-blood.html"
 box_novel_url: str = "https://boxnovel.com/novel/top-tier-providence-secretly-cultivate-for-a-thousand-years/"
 
 
-absolute_res_nf = NovelFull(novel_full_url, starting_number=34, ending_number=60)
+btth_nf = NovelFull(novel_full_url, output_format='epub')
 # print(absolute_res_nf.ending_number, absolute_res_nf.starting_number)
 # x = absolute_res_nf.get_chapter_list()
+btth_nf.get_final()
 
 absolute_res_ad = AnimeDaily(anime_daily_url,starting_number=18, ending_number=30, output_format='epub')
 # x = absolute_res_ad.get_chapter_list()
 # absolute_res_ad.get_final()
 
-coiling_drag_nb = NovelBin(novel_bin_url, 11, 100, 'pdf')
+btth_nb = NovelBin(novel_bin_url, 'epub')
 # x = coiling_drag_nb.get_chapter_list()
 # print(x)
-# coiling_drag_nb.get_final()
+btth_nb.get_final()
 
 free_web_novel_n = FreeWebNovel(free_web_novel_url, ending_number=1, output_format='epub')
 # free_web_novel_n.get_final()
