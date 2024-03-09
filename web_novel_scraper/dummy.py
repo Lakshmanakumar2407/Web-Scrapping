@@ -15,12 +15,3 @@ soup = BeautifulSoup(response.text, 'lxml')
 with open('reference.html','w',encoding='utf-8', newline='') as refer:
     refer.write(soup.prettify())
 
-# paras = soup.find_all('p')[1:-1]
-# for index, para in enumerate(paras):
-#     print(index)
-#     print(para.get_text())
-
-# name = "Lord of Mysteries 2- Circle of Inevitability"
-
-# with open(f"{name}.md",'w') as file:
-#     print('opened')
