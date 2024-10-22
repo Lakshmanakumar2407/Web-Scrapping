@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 class NovelScraper:
     """
-    This is base template for other classes.
+    This is base template for other classes. 
     None of the methods here are for user use
     """
     list_of_ua = [
@@ -187,7 +187,7 @@ class NovelFull(NovelScraper):
 
             if self.starting_number != NovelScraper.default_start_number or \
                 self.ending_number != NovelScraper.extremely_large_number:
-
+ 
                 if self.starting_number <= chapter_num <= self.ending_number:
                     self.chapter_url_dict[chapter_name] = chapter_link
 
@@ -507,7 +507,7 @@ class BoxNovel(NovelScraper):
 
 
 novel_full_url: str = "https://novelfull.com/battle-through-the-heavens.html"
-anime_daily_url: str = "https://animedaily.net/absolute-resonance-novel.html"
+anime_daily_url: str = "https://animedaily.net/martial-world-novel.html"
 novel_bin_url: str = "https://novelbin.com/b/battle-through-the-heavens-novel"
 free_web_novel_url : str = "https://freewebnovel.com/divine-throne-of-primordial-blood.html"
 box_novel_url: str = "https://boxnovel.com/novel/top-tier-providence-secretly-cultivate-for-a-thousand-years/"
@@ -516,16 +516,16 @@ box_novel_url: str = "https://boxnovel.com/novel/top-tier-providence-secretly-cu
 btth_nf = NovelFull(novel_full_url, output_format='epub')
 # print(absolute_res_nf.ending_number, absolute_res_nf.starting_number)
 # x = absolute_res_nf.get_chapter_list()
-btth_nf.get_final()
+# btth_nf.get_final()
 
-absolute_res_ad = AnimeDaily(anime_daily_url,starting_number=18, ending_number=30, output_format='epub')
+absolute_res_ad = AnimeDaily(anime_daily_url, output_format='epub')
 # x = absolute_res_ad.get_chapter_list()
-# absolute_res_ad.get_final()
+absolute_res_ad.get_final()
 
 btth_nb = NovelBin(novel_bin_url, 'epub')
 # x = coiling_drag_nb.get_chapter_list()
 # print(x)
-btth_nb.get_final()
+# btth_nb.get_final()
 
 free_web_novel_n = FreeWebNovel(free_web_novel_url, ending_number=1, output_format='epub')
 # free_web_novel_n.get_final()
@@ -534,5 +534,5 @@ box_novel_n = BoxNovel(box_novel_url, 1, 10,'pdf')
 # box_novel_n.create_md()
 # box_novel_n.get_final()
 # x = box_novel_n.get_novel_details()
-print(box_novel_n)
+# print(box_novel_n)
 # box_novel_n._touch_doc()
